@@ -1,38 +1,80 @@
+* {
+  box-sizing: border-box;
+  font-size: 18px;
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 50%;
+  margin: auto;
+  margin-top: 50px;
 }
-
-.App-link {
-  color: #61dafb;
+.App .controll-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .controll-panel .array-taker {
+  width: 40%;
+}
+.App .controll-panel .sortmethod-selecto {
+  width: 15%;
+}
+.App .controll-panel .btn {
+  width: 10%;
+}
+.App .controll-panel .speed-controller {
+  width: 35%;
+}
+.App .controll-panel .speed-controller input {
+  width: 100%;
+}
+.App .controll-panel .speed-controller .speed-ticks {
+  display: flex;
+  justify-content: space-between;
+}
+.visualizer {
+  margin-top: 70px;
+  width: 100%;
+  box-shadow: 0 0 5px gray;
+  padding: 10px;
+}
+.visualizer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.visualizer ul .num-bar {
+  background-color: aqua;
+  margin: 5px;
+  font-size: 20px;
+  padding: 5px;
+}
+@media (max-width: 1000px) {
+  .App {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media (max-width: 700px) {
+  .App .controll-panel {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .App .controll-panel .array-taker {
+    width: 70%;
+  }
+  .App .controll-panel .sortmethod-selector {
+    width: 30%;
+    margin-top: 10px;
+  }
+  .App .controll-panel .btn {
+    width: 30%;
+    margin-top: 5px;
+  }
+  .App .controll-panel .speed-controller {
+    width: 50%;
   }
 }

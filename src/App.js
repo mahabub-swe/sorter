@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ControllPanel from "./ControllPanel";
+import Visualizer from "./Visualizer";
 
 function App() {
+  const [array, setArray] = React.useState([]);
+  const [sortedArray, setSortedArray] = React.useState([]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ControllPanel
+        array={array}
+        setArray={setArray}
+        setSortedArray={setSortedArray}
+      />
+      <Visualizer array={array} sortedArray={sortedArray} />
     </div>
   );
 }
